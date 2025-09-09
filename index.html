@@ -1,1 +1,77 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>☣ WormGPT - Localhost ☣</title>
+  <style>
+    body {
+      background: #000;
+      color: #00ff00;
+      font-family: "Courier New", monospace;
+      text-align: center;
+      padding: 30px;
+    }
+    h1 {
+      font-size: 32px;
+      color: #0f0;
+      text-shadow: 0 0 15px #0f0;
+    }
+    textarea {
+      width: 80%;
+      height: 120px;
+      background: #111;
+      color: #0f0;
+      border: 2px solid #0f0;
+      border-radius: 5px;
+      padding: 10px;
+      font-size: 14px;
+      outline: none;
+    }
+    button {
+      background: #0f0;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      padding: 12px 25px;
+      margin-top: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #00cc00;
+      box-shadow: 0 0 10px #0f0;
+    }
+    .response {
+      margin-top: 30px;
+      padding: 15px;
+      background: #111;
+      border: 1px solid #0f0;
+      border-radius: 5px;
+      text-align: left;
+      white-space: pre-wrap;
+      max-width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 0 20px #0f0;
+    }
+    .label {
+      font-weight: bold;
+      color: #0f0;
+    }
+  </style>
+</head>
+<body>
+  <h1>☣ WormGPT - Localhost ☣</h1>
+  <form method="POST">
+    <textarea name="prompt" placeholder=">> Type your command here..."></textarea><br>
+    <button type="submit">EXECUTE</button>
+  </form>
+  {% if response %}
+    <div class="response">
+      <span class="label">WormGPT >> </span>{{ response }}
+    </div>
+  {% endif %}
+</body>
+</html>
